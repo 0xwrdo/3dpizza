@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Forno 88 · Wood-fired pizza in SoHo, New York</title>
+  <meta name="description" content="Neapolitan pizza baked to order in a wood oven at Mercer &amp; Spring, New York. Order pickup online.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://forno88pizza.com/">
+  <meta property="og:title" content="Forno 88 · Wood-fired pizza in SoHo, New York">
+  <meta property="og:description" content="Baked to order in a wood oven at Mercer &amp; Spring.">
+  <meta property="og:image" content="https://forno88pizza.com/og-image.jpg">
+  <meta property="og:image:alt" content="A slice of Forno 88 pizza on a cream background">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="canonical" href="https://forno88pizza.com/">
+  <meta name="theme-color" content="#ece3d2">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Pizzeria",
+    "name": "Forno 88",
+    "url": "https://forno88pizza.com/",
+    "image": "https://forno88pizza.com/og-image.jpg",
+    "telephone": "+12125550188",
+    "email": "hearth@forno88pizza.com",
+    "priceRange": "$$",
+    "servesCuisine": ["Neapolitan Pizza", "Italian"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "88 Via Del Forno, Corner of Mercer & Spring",
+      "addressLocality": "New York",
+      "addressRegion": "NY",
+      "postalCode": "10012",
+      "addressCountry": "US"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 40.7245, "longitude": -73.9982 },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "12:00", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "12:00", "closes": "23:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "13:00", "closes": "21:30" }
+    ],
+    "hasMenu": "https://forno88pizza.com/#menu",
+    "acceptsReservations": false
+  }
+  </script>
+
+  <script type="module" crossorigin src="/assets/main-CISGfZzE.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/three-CdEtKK5L.js">
+  <link rel="modulepreload" crossorigin href="/assets/gsap-CzGW6FVa.js">
+  <link rel="stylesheet" crossorigin href="/assets/style-DFF89XpY.css">
+</head>
+<body>
+  <div id="loader" class="loader" aria-hidden="true"></div>
+
+  <!-- The 3D slice lives on this canvas, above the page text. -->
+  <canvas id="webgl-canvas" class="webgl-canvas" aria-hidden="true"></canvas>
+
+  <!-- Only shown if WebGL isn't available -->
+  <div id="webgl-fallback" class="webgl-fallback" aria-hidden="true" hidden>
+    <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M60 10L105 105C80 115 40 115 15 105L60 10Z" fill="#d9944a"/>
+      <path d="M60 20L97 98C76 106 44 106 23 98L60 20Z" fill="#efd89a"/>
+      <circle cx="58" cy="62" r="6" fill="#b8321e"/>
+      <circle cx="68" cy="82" r="5" fill="#b8321e"/>
+      <circle cx="50" cy="80" r="4.5" fill="#b8321e"/>
+    </svg>
+  </div>
+
+  <div class="top-fade" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <a href="#hero" class="brand" aria-label="Forno 88, back to top">Forno 88</a>
+
+    <nav class="nav-pill" aria-label="Main">
+      <a href="#craft">How we make it</a>
+      <a href="#menu">Menu</a>
+      <a href="#visit">Visit</a>
+    </nav>
+
+    <div class="header-end">
+      <button type="button" class="btn btn-solid btn-sm" data-order>Order pickup</button>
+      <button type="button" class="menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <a href="#craft">How we make it</a>
+      <a href="#menu">Menu</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <button type="button" class="btn btn-solid" data-order>Order pickup</button>
+  </div>
+
+  <main class="content-wrapper">
+    <!-- 1. Hero -->
+    <section id="hero" class="scene scene-hero" data-bg="#ece3d2" data-fg="#1b1612" aria-labelledby="hero-title">
+      <div class="slot hero-slot" data-slot aria-hidden="true"></div>
+      <div class="hero-copy">
+        <h1 id="hero-title">Wood-fired<br>pizza.</h1>
+        <p class="lede">Baked to order in a wood oven on Mercer &amp; Spring, New York.</p>
+        <div class="actions">
+          <button type="button" class="btn btn-solid" data-order>Order pickup</button>
+          <a href="#menu" class="btn btn-line">See the menu</a>
+        </div>
+      </div>
+      <p class="scroll-hint" aria-hidden="true">Scroll</p>
+    </section>
+
+    <!-- 2. How we make it -->
+    <section id="craft" class="scene scene-craft" data-bg="#16110e" data-fg="#f2e9d8" aria-labelledby="craft-title">
+      <div class="slot craft-slot" data-slot aria-hidden="true"></div>
+      <div class="craft-copy">
+        <h2 id="craft-title" class="statement">The dough rests for two days. The pizza bakes for ninety seconds.</h2>
+        <div class="facts">
+          <div>
+            <h3>Dough</h3>
+            <p>Flour, water, salt and a little sourdough starter. It sits in the cold for 48 hours before we stretch it.</p>
+          </div>
+          <div>
+            <h3>Oven</h3>
+            <p>A beechwood fire at around 850°F. A pizza is done in about 90 seconds.</p>
+          </div>
+          <div>
+            <h3>Toppings</h3>
+            <p>San Marzano tomatoes crushed by hand, fior di latte from Agerola, olive oil to finish.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Menu -->
+    <section id="menu" class="scene scene-menu" data-bg="#16110e" data-fg="#f2e9d8" aria-labelledby="menu-title">
+      <div class="menu-sticky">
+       <div class="slot menu-slot" data-slot aria-hidden="true"></div>
+       <div class="menu-copy">
+        <h2 id="menu-title" class="section-title">Menu</h2>
+        <p class="note">We make a limited number of pizzas each day, so some nights we sell out.</p>
+
+        <ol class="menu-list" id="menu-list">
+          <li class="menu-row">
+            <div class="row-head"><h3>Margherita D.O.P.</h3><span class="price">$19</span></div>
+            <p>San Marzano tomato, fior di latte, basil, Parmigiano Reggiano, olive oil.</p>
+          </li>
+          <li class="menu-row">
+            <div class="row-head"><h3>Diavola 88</h3><span class="price">$23</span></div>
+            <p>Spianata Calabrese, smoked scamorza, ’nduja, hot honey, oregano.</p>
+          </li>
+          <li class="menu-row">
+            <div class="row-head"><h3>Tartufo &amp; Funghi</h3><span class="price">$25</span></div>
+            <p>Chanterelles and cremini, black truffle cream, fontina, caramelized shallots, thyme. No tomato.</p>
+          </li>
+        </ol>
+       </div>
+      </div>
+    </section>
+
+    <!-- 4. Visit -->
+    <section id="visit" class="scene scene-visit" data-bg="#c9361f" data-fg="#fbf0de" aria-labelledby="visit-title">
+      <div class="visit-main">
+        <div class="slot visit-slot" data-slot aria-hidden="true"></div>
+        <h2 id="visit-title" class="closing">Come <em>hungry</em>.</h2>
+        <div class="actions actions-center">
+          <button type="button" class="btn btn-solid" data-order>Order pickup</button>
+          <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=88+Via+Del+Forno+New+York+NY+10012" target="_blank" rel="noopener noreferrer">Get directions</a>
+        </div>
+      </div>
+
+      <footer class="site-footer">
+        <div class="info">
+          <div>
+            <h3>Address</h3>
+            <address>88 Via Del Forno<br>Corner of Mercer &amp; Spring<br>New York, NY 10012</address>
+          </div>
+          <div>
+            <h3>Hours</h3>
+            <p>Mon to Thu, 12 to 10<br>Fri and Sat, 12 to 11:30<br>Sunday, 1 to 9:30</p>
+          </div>
+          <div>
+            <h3>Contact</h3>
+            <p><a href="tel:+12125550188">(212) 555-0188</a><br><a href="mailto:hearth@forno88pizza.com">hearth@forno88pizza.com</a></p>
+          </div>
+        </div>
+        <p class="fine">
+          <span>&copy; <span id="copyright-year">2026</span> Forno 88</span>
+          <span><a href="https://sketchfab.com/3d-models/plain-pizza-slice-486238438ec64c3cb64d607a30d1a9e6" target="_blank" rel="noopener noreferrer">Plain Pizza Slice by inciprocal</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>, via Sketchfab</span>
+        </p>
+      </footer>
+    </section>
+  </main>
+
+  <dialog id="order-dialog" class="order-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-body">
+      <button type="button" class="dialog-close" id="dialog-close-btn">Close</button>
+
+      <div id="order-view-form" class="dialog-view">
+        <h2 id="dialog-title">Order for pickup</h2>
+        <p class="muted">Ready in about 15 minutes. You pay when you pick up.</p>
+
+        <form id="order-form" novalidate>
+          <fieldset class="picks">
+            <legend class="sr-only">Pizza</legend>
+            <label class="pick">
+              <input type="radio" name="selected_pizza" value="Margherita D.O.P." data-price="19" checked>
+              <span class="pick-name">Margherita D.O.P.</span><span>$19</span>
+            </label>
+            <label class="pick">
+              <input type="radio" name="selected_pizza" value="Diavola 88" data-price="23">
+              <span class="pick-name">Diavola 88</span><span>$23</span>
+            </label>
+            <label class="pick">
+              <input type="radio" name="selected_pizza" value="Tartufo &amp; Funghi" data-price="25">
+              <span class="pick-name">Tartufo &amp; Funghi</span><span>$25</span>
+            </label>
+          </fieldset>
+
+          <div class="qty-row">
+            <label for="order-qty">How many</label>
+            <div class="qty">
+              <button type="button" id="qty-minus" aria-label="One fewer">&minus;</button>
+              <input type="number" id="order-qty" name="quantity" min="1" max="10" value="1" readonly>
+              <button type="button" id="qty-plus" aria-label="One more">+</button>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="order-name">Name</label>
+            <input type="text" id="order-name" name="customer_name" autocomplete="name" required>
+            <span class="field-error" id="name-error-msg" hidden>We need a name to put on the order.</span>
+          </div>
+
+          <div class="field">
+            <label for="order-phone">Phone <span class="muted">(we text when it’s ready)</span></label>
+            <input type="tel" id="order-phone" name="customer_phone" autocomplete="tel" required>
+            <span class="field-error" id="phone-error-msg" hidden>That phone number looks too short.</span>
+          </div>
+
+          <button type="submit" class="btn btn-solid btn-block" id="order-submit-btn">
+            Place order · <span id="order-total-price">$19</span>
+          </button>
+        </form>
+      </div>
+
+      <div id="order-view-loading" class="dialog-view" hidden>
+        <p class="status" role="status">Sending your order…</p>
+      </div>
+
+      <div id="order-view-success" class="dialog-view" hidden>
+        <h2>Thanks, <span id="ticket-name"></span>.</h2>
+        <p>Order <strong id="ticket-number">#4109</strong>: <span id="ticket-summary"></span>, <span id="ticket-total"></span>.</p>
+        <p class="muted">Ready in about 15 minutes at 88 Via Del Forno. Pay at the counter.</p>
+        <div class="dialog-actions">
+          <button type="button" class="btn btn-solid" id="order-done-btn">Done</button>
+          <button type="button" class="btn btn-line" id="order-again-btn">Order again</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+</body>
+</html>

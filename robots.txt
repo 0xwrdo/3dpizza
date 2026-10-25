@@ -1,0 +1,6 @@
+# FORNO 88 Pizzeria robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://forno88pizza.com/sitemap.xml
+

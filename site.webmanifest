@@ -1,0 +1,10 @@
+{
+  "name": "Forno 88",
+  "short_name": "Forno 88",
+  "description": "Wood-fired pizza in SoHo, New York.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ece3d2",
+  "theme_color": "#ece3d2",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
